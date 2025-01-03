@@ -1042,6 +1042,8 @@ JS_EXTERN int JS_SetModuleExport(JSContext *ctx, JSModuleDef *m, const char *exp
                                  JSValue val);
 JS_EXTERN int JS_SetModuleExportList(JSContext *ctx, JSModuleDef *m,
                                      const JSCFunctionListEntry *tab, int len);
+JS_EXTERN int JS_IsMap(JSContext *ctx, JSValueConst val);
+JS_EXTERN int JS_IsPromise(JSContext *ctx, JSValueConst val);
 
 /* Version */
 

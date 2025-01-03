@@ -51878,6 +51878,17 @@ JS_BOOL JS_IsArrayBuffer(JSValue obj) {
     return JS_GetClassID(obj) == JS_CLASS_ARRAY_BUFFER;
 }
 
+/* return -1 if exception (proxy case) or TRUE/FALSE */
+int JS_IsMap(JSContext *ctx, JSValueConst val)
+{
+    return JS_GetClassID(val) == JS_CLASS_MAP;
+}
+
+int JS_IsPromise(JSContext *ctx, JSValueConst val)
+{
+    return JS_GetClassID(val) == JS_CLASS_PROMISE;
+}
+
 /* create a new ArrayBuffer of length 'len' and copy 'buf' to it */
 JSValue JS_NewArrayBufferCopy(JSContext *ctx, const uint8_t *buf, size_t len)
 {
